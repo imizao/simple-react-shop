@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Row, Col } from 'antd'
 
 class RightContent extends Component {
   constructor(props) {
@@ -7,7 +8,17 @@ class RightContent extends Component {
   }
   render() {
     return (
-      <div className={'right-content'}></div>
+      <Row gutter={10} >
+        <Col xs={24} sm={12} md={12} lg={8} xl={8}>
+          <div className={'right-content'}></div>
+        </Col>
+        <Col xs={24} sm={12} md={12} lg={8} xl={8}>
+          <div className={'right-content'}></div>
+        </Col>
+        <Col xs={24} sm={12} md={12} lg={8} xl={8}>
+          <div className={'right-content'}></div>
+        </Col>
+      </Row>
     );
   }
 }

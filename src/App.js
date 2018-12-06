@@ -37,8 +37,7 @@ const styles = {
     background: '#000',
     color: '#fff',
     fontSize: '16px',
-    wordSpacing: '1px',
-    marginTop: '10px'
+    wordSpacing: '1px'
   }
 }
 export default App;

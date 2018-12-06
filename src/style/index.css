@@ -40,6 +40,16 @@ body, html {
 }
 .right-content{
   background: rgb(194, 129, 188);
-  padding: 20px;
   height: 100px;
+}
+.right-content{
+  background: rgb(194, 129, 188);
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 575px){
+  .active-margin{
+    margin-bottom: 10px;
+  }
 }
