@@ -1,0 +1,35 @@
+@import '~antd/dist/antd.css';
+.ant-layout-header{
+  background: #fff;
+}
+
+body, html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Barlow,Helvetica,Arial,sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #e6eefb;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.text-center{
+  text-align: center;
+}
+.capsule {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.masthead {
+  width: 100%;
+  height: 100px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+}
