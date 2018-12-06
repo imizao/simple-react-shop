@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'antd';
 
-class sHeader extends Component {
+class SHeader extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -18,10 +18,9 @@ class sHeader extends Component {
             )
           })
         }
-        
       </Row>
     );
   }
 }
 
-export default sHeader;
+export default SHeader;

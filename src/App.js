@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import SHeader from './components/header'
-const {
-  Header, Footer, Sider, Content,
-} = Layout;
+import SContent from './components/content'
+const { Header, Footer } = Layout;
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +19,7 @@ class App extends Component {
           <Layout className={'capsule'}>
             <Header className={'masthead'} style={styles.header}></Header>
             <Layout>
-              <Sider>Sider</Sider>
-              <Content>Content</Content>
+              <SContent></SContent>
             </Layout>
           </Layout>
           <Footer className={'text-center'} style={styles.footer}>Made with 🎸 from imizao. This project is open source, visit the repo.</Footer>
@@ -40,6 +38,7 @@ const styles = {
     color: '#fff',
     fontSize: '16px',
     wordSpacing: '1px',
+    marginTop: '10px'
   }
 }
 export default App;

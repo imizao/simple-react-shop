@@ -33,3 +33,13 @@ body, html {
   overflow: hidden;
   margin: 10px 0;
 }
+.left-content{
+  background: rgb(61, 134, 194);
+  padding: 20px;
+  height: 100px;
+}
+.right-content{
+  background: rgb(194, 129, 188);
+  padding: 20px;
+  height: 100px;
+}
