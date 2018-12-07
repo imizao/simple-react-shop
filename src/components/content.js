@@ -12,10 +12,10 @@ class SContent extends Component {
   render() {
     return (
       <Row gutter={10}>
-        <Col xs={24} sm={6} md={6} lg={4} xl={4} className={'active-margin'}>
+        <Col xs={24} sm={8} md={5} lg={5} xl={5} className={'active-margin'}>
           <LeftContent></LeftContent>
         </Col>
-        <Col xs={24} sm={18} md={18} lg={20} xl={20}>
+        <Col xs={24} sm={16} md={19} lg={19} xl={19}>
           <RightContent></RightContent>
         </Col>
       </Row>
