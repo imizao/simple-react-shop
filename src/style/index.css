@@ -88,7 +88,7 @@ body, html {
   margin: 0;
 }
 .ant-slider-margin{
-  margin: 14px 6px 1px;
+  margin: 14px 6px 5px;
 }
 .ant-switch-size{
   height: 30px;
@@ -100,6 +100,19 @@ body, html {
 }
 .ant-divider-horizontal{
   margin: 24px 0 0 0 ;
+}
+.salepill{
+  background: #e82319;
+  color: #fff;
+  font-family: Barlow,sans-serif;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  padding: 2px 10px 4px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 1000px;
 }
 @media (max-width: 575px){
   .active-margin{

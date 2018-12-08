@@ -5,7 +5,7 @@ class LeftContent extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      sliderValue: 150
+      sliderValue: 250
      };
     this.sliderChange = this.sliderChange.bind(this)
   }
@@ -18,7 +18,7 @@ class LeftContent extends Component {
     return (
       <div className={'left-content'}>
         <div className={'sidearea'}>
-          <div className={'label'}>最高价格：<span className="small-text">￥{this.state.sliderValue}</span></div>
+          <div className={'label'}>最高价格：<span className={'small-text'}>￥{this.state.sliderValue}</span></div>
           <Slider className={'ant-slider-margin'} defaultValue={this.state.sliderValue} step={0.1} min={0} max={400} onChange={this.sliderChange} tipFormatter={null}/>
           <div className={'min'}>￥0</div>
           <div className={'max'}>￥400</div>
@@ -38,7 +38,6 @@ class LeftContent extends Component {
           <div className={'label'}>联系我们！</div>
           <p>如有问题？欢迎致电135****2375，我们很乐意为您服务。</p>
         </div>
-        
       </div>
     );
   }
