@@ -5,7 +5,7 @@ class SHeader extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      nav: ['女人装','男人装','销售']
+      nav: ['女人装','男人装','促销']
      };
   }
   render() {

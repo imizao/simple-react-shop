@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col, Button } from 'antd'
+import store from '../store'
 import shoe1 from '../static/shoe1.png';
 import jacket1 from '../static/jacket1.png';
 import jacket2 from '../static/jacket2.png';
@@ -117,15 +118,22 @@ class RightContent extends Component {
     super(props);
     this.state = { 
       goodsList: goods,
-      sale: false,
+      sale: store.getState().sale,
       highprice: 300
-     };
-     this.goodsListFilter = this.goodsListFilter.bind(this)
+    };
+    this.goodsListFilter = this.goodsListFilter.bind(this)
   }
   goodsListFilter(){
+    console.log(this.state.sale)
     this.setState({
       sale: !this.state.sale
     })
+    const action = {
+      type: 'change_sale',
+      sale: !this.state.sale
+    }
+    store.dispatch(action)
+    console.log(this.state.sale)
     var goodsList = this.state.goodsList.filter(el => 
       this.state.sale
         ? el.price < this.state.highprice && el.sale

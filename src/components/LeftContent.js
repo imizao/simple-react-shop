@@ -1,18 +1,28 @@
 import React, { Component } from 'react'
 import { Slider, Switch, Divider, Icon } from 'antd';
+import store from '../store';
 
 class LeftContent extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      sliderValue: 250
+      sliderValue: 250,
+      sale: store.getState().sale
      };
     this.sliderChange = this.sliderChange.bind(this)
+    this.switchChange = this.switchChange.bind(this)
   }
   sliderChange(value) {
     this.setState({
       sliderValue: value
     })
+  }
+  switchChange(e) {
+    const action = {
+      type: 'switch_change_sale',
+      sale: e
+    }
+    store.dispatch(action)
   }
   render() {
     return (
@@ -26,7 +36,11 @@ class LeftContent extends Component {
         <Divider />
         <div className={'sidearea'}>
           <div className={'label'}>仅显示促销</div>
-          <Switch className={'ant-switch-size'} checkedChildren={<Icon type="check" />} unCheckedChildren={<Icon type="close" />}/>
+          <Switch 
+          className={'ant-switch-size'} 
+          checkedChildren={<Icon type="check" />} 
+          unCheckedChildren={<Icon type="close" />}
+          onChange={this.switchChange}/>
         </div>
         <Divider />
         <div className={'sidearea'}>
