@@ -6,13 +6,18 @@ class LeftContent extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      sliderValue: 250,
+      sliderValue: store.getState().sliderValue,
       sale: store.getState().sale
      };
     this.sliderChange = this.sliderChange.bind(this)
     this.switchChange = this.switchChange.bind(this)
   }
   sliderChange(value) {
+    var action = {
+      type: 'slider_value_change',
+      sliderValue: value
+    }
+    store.dispatch(action)
     this.setState({
       sliderValue: value
     })
