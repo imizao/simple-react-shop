@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Row, Col, Button } from 'antd'
+import { Row, Col, Button} from 'antd'
 import store from '../store'
-
+import QueueAnim from 'rc-queue-anim';
 
 class RightContent extends Component {
   constructor(props) {
@@ -12,6 +12,11 @@ class RightContent extends Component {
     };
     this.handleStoreChange = this.handleStoreChange.bind(this)
     store.subscribe(this.handleStoreChange)
+  }
+  onClick = () => {
+    this.setState({
+      show: !this.state.show
+    })
   }
   handleStoreChange(){
     var goodsList = store.getState().goodsList.filter(el => 
@@ -27,6 +32,10 @@ class RightContent extends Component {
   render() {
     return (
       <Row gutter={10} >
+      <QueueAnim 
+          delay={100}
+          type={['right', 'left']}
+          ease={['easeOutQuart', 'easeInOutQuart']}>
         {this.state.goodsList.map((item,index) => {
           return (
             <Col  key={index} xs={24} sm={24} md={12} lg={8} xl={8}>
@@ -42,6 +51,7 @@ class RightContent extends Component {
             </Col>
           )
         })}
+        </QueueAnim>
       </Row>
     );
   }
